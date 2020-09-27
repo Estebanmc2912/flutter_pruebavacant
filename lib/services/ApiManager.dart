@@ -7,11 +7,11 @@ import 'package:http/http.dart' as http;
 class APIManager{
   Future <UserModel> getUsers() async{
     var client = http.Client();
-    var usermodel;
+    var usermodel = null;
 
     try {
 
-      var response = await http.get(Strings.user_url);
+      var response = await client.get(Strings.user_url);
 
       if (response.statusCode == 200) {
         var jsonString = response.body;
