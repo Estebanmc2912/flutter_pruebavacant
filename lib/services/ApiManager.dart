@@ -5,7 +5,7 @@ import 'package:flutter_pruebavacant/models/UserInfo.dart';
 import 'package:http/http.dart' as http;
 
 class APIManager{
-  Future <List<UserModel>> getUsers() async{
+  Future <UserModel> getUsers() async{
     var client = http.Client();
     var usermodel;
 

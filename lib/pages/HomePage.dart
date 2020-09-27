@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_pruebavacant/models/UserInfo.dart';
 import 'package:flutter_pruebavacant/services/ApiManager.dart';
 import 'package:flutter_pruebavacant/utils/CustomCardShapePainter.dart';
 import 'package:flutter_pruebavacant/utils/common_widgets.dart';
@@ -11,14 +12,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final double _borderRadius = 24;
-  var _usersModel;
+  //Future <UserModel> _usersModel;
 
   @override
   void initState(){
-    _usersModel = APIManager().getUsers();
+   // _usersModel = APIManager().getUsers();
     super.initState();
   }
 
+  ///variables de prueba
   var items = [
     PlaceInfo('Esteban Moreno Castillo', Color(0xff6DC8F3), Color(0xff73A1F9),
         4.4, 'estebanmc2912@gmail.com', '(+57) 3167388801'),
