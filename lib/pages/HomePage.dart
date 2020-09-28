@@ -48,9 +48,7 @@ class _HomePageState extends State<HomePage> {
           // ignore: missing_return
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
-              if (snapshot.data == null) {
-                List<UserModel> modelos;
-                modelos.add(snapshot.data);
+              if (!snapshot.hasData) {
                 return ListView.builder(
                   itemCount: items.length,
                   itemBuilder: (context, index) {
