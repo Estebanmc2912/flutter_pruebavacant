@@ -54,19 +54,6 @@ class UserModel {
     "company": company.toJson(),
   };
 
- /* UserModel(String id, String name){
-    this.id = id;
-    this.name = name;
-    this.username;
-    this.email;
-    this.address;
-    this.phone;
-    this.website;
-    this.company;
-
-  }*/
-
-
 }
 
 class Address {

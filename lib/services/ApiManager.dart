@@ -5,6 +5,11 @@ import 'package:flutter_pruebavacant/models/UserInfo.dart';
 import 'package:http/http.dart' as http;
 
 class APIManager{
+
+  List <UserModel> _userModelList;
+
+  List<UserModel> getuserModelList() => _userModelList;
+
   Future <UserModel> getUsers() async{
     var client = http.Client();
     var usermodel = null;
@@ -17,12 +22,15 @@ class APIManager{
         var jsonString = response.body;
         var jsonMap = json.decode(jsonString);
         usermodel = jsonMap.map((model) => UserModel.fromJson(model)).toList();
+        _userModelList = usermodel;
+        return usermodel;
       }
     }catch(Exception){
       return usermodel;
     }
-    return usermodel;
   }
+
+
 
  /* Future<List<UserModel>> _getUsers() async {
 
